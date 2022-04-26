@@ -9,10 +9,11 @@ import { oneFrame } from "./oneFrame";
 import { rightGroup } from "./rightGroup";
 import { from } from '../string/from';
 
-export type frame<T extends number> = compare<T, 10> extends true
-    ? from<T> extends `${infer Before}000`
-        ? ` ${Before}s `
-        : ` ${T}ms `
-    : repeat<oneFrame, T>
+export type frame<T extends number> =
+    from<T> extends `${infer Before}000`
+        ? `-${Before}s-`
+        : from<T> extends `${infer Before}0`
+            ? `-${Before}ms-`
+            : repeat<oneFrame, T>
 
 export type symbols = leftGroup | rightGroup | end | oneFrame
