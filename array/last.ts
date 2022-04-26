@@ -1,0 +1,1 @@
+export type last<T extends unknown[]> = T extends [...infer Before, infer Item] ? Item : never;

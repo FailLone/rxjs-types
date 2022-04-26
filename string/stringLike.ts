@@ -1,0 +1,1 @@
+export type stringLike = string | number | bigint | boolean | null | undefined
