@@ -13,7 +13,7 @@ export type frame<T extends number> =
     from<T> extends `${infer Before}000`
         ? `-${Before}s-`
         : from<T> extends `${infer Before}0`
-            ? `-${Before}ms-`
+            ? Before extends '' ? '' : `-${Before}0ms-`
             : repeat<oneFrame, T>
 
 export type symbols = leftGroup | rightGroup | end | oneFrame
