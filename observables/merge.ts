@@ -20,18 +20,10 @@ type mergeTwo<A extends RenderItem, B extends RenderItem>
             : [replaceIsEnd<A, false>, replaceIsEnd<match<B, A['frame'], 0>, false>]
 
 export type merge<A extends RenderItem[], B extends RenderItem[], Seed extends number = 0>
-    = compare<Seed, maxNestCount> extends true
+    = Seed extends add<maxNestCount, 1>
         ? [getRenderItem<0, 0, false, true>]
         : A extends [infer ItemA, ...infer RestA]
             ? B extends [infer ItemB, ...infer RestB]
-                ? ItemA extends RenderItem
-                    ? ItemB extends RenderItem
-                        ? RestA extends RenderItem[]
-                            ? RestB extends RenderItem[]
-                                ? [...mergeTwo<ItemA, ItemB>, ...merge<RestA, RestB, add<Seed, 2>>]
-                                : [...mergeTwo<ItemA, ItemB>, ...RestA]
-                            : [...mergeTwo<ItemA, ItemB>, ...RestB]
-                        : never
-                    : never
+                ? [...mergeTwo<ItemA & RenderItem, ItemB & RenderItem>, ...merge<RestA extends RenderItem[] ? RestA : [], RestB extends RenderItem[] ? RestB : [], add<Seed, 2>>]
                 : A
             : B

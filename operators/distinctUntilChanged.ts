@@ -8,11 +8,7 @@ export type distinctUntilChanged<S extends RenderItem[]> =
 
 type distinctHelper<S extends RenderItem[], Prev extends stringLike = ''>
     = S extends [infer Item, ...infer Rest]
-        ? Item extends RenderItem
-            ? Rest extends RenderItem[]
-                ? Prev extends Item['value']
-                    ? distinctHelper<Rest, Prev>
-                    : [Item, ...distinctHelper<Rest, Item['value']>]
-                : S
-            : S
+        ? Prev extends (Item & RenderItem)['value']
+            ? distinctHelper<Rest extends RenderItem[] ? Rest : [], Prev>
+            : [Item, ...distinctHelper<Rest extends RenderItem[] ? Rest : [], (Item & RenderItem)['value']>]
         : S

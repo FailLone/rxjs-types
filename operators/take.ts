@@ -13,9 +13,5 @@ type takeHelper<S extends RenderItem[], Count extends number, Res extends Render
     isEqual<Count, Seed> extends true
         ? Res
         : S extends [infer Item, ...infer Rest]
-            ? Rest extends RenderItem[]
-                ? Item extends RenderItem
-                    ? takeHelper<Rest, Count, push<Res, Item>, add<Seed, 1>>
-                    : Res
-                : Res
+            ? takeHelper<Rest extends RenderItem[] ? Rest : [], Count, push<Res, Item & RenderItem>, add<Seed, 1>>
             : Res
