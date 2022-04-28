@@ -1,7 +1,3 @@
-import { endsWith } from './../string/endsWith';
-import { error } from "../common/error";
-import { maxNestCount } from "../common/maxNestCount";
-import { compare } from "../number/compare";
 import { repeat } from "../string/repeat";
 import { end } from "./end";
 import { leftGroup } from "./leftGroup";

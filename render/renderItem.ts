@@ -5,6 +5,7 @@ export interface RenderItem {
     frame: number;
     isEnd: boolean;
     isInfinite: boolean;
+    isError?: boolean;
 }
 
 export type getRenderItem<Value extends stringLike, Frame extends number = 0, IsEnd extends boolean = false, IsInfinite extends boolean = false> = {
