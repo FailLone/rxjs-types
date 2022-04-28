@@ -5,7 +5,7 @@ import { add } from '../number/add';
 
 export type repeat<T extends RenderItem[], Count extends number | void = void, Delay extends number = 0> =
     Count extends 0
-        ? []
+        ? [getRenderItem<'', 0, true>]
         : compare<T['length'], maxNestCount> extends false
             ? T extends [...infer Before, infer Item]
                 ? (Item & RenderItem)['isEnd'] extends true
