@@ -6,7 +6,7 @@ import { stringLike } from "../string/stringLike";
 export type filter<T extends Observable, Match extends stringLike> =
     replaceValue<T, filterHelper<T['values'], Match>>
 
-type filterHelper<T extends RenderItem[], Match extends stringLike, Frame extends string = '0'> =
+export type filterHelper<T extends RenderItem[], Match extends stringLike, Frame extends string = '0'> =
     T extends [infer Item, ...infer Rest]
         ? bigAdd<Frame, (Item & RenderItem)['frame']> extends `${infer NewFrame}`
             ? (Item & RenderItem)['value'] extends Match

@@ -43,7 +43,7 @@
 
 - [ ] concat
 
-## operators 
+## operators
 
 - [X] delay
 
@@ -81,10 +81,16 @@
 
 - [X] startsWith
 
-![image](https://user-images.githubusercontent.com/11540557/165907291-09132ab2-bcc2-4173-a2e0-2f3da8f3aff4.png)
+![startsWith](https://user-images.githubusercontent.com/11540557/165907291-09132ab2-bcc2-4173-a2e0-2f3da8f3aff4.png)
 
 - [X] take
 
-![image](https://user-images.githubusercontent.com/11540557/165907361-c22a8f4d-8999-469a-aa70-c8974cb617ad.png)
+![take](https://user-images.githubusercontent.com/11540557/165907361-c22a8f4d-8999-469a-aa70-c8974cb617ad.png)
 
-- [ ] single
+- [X] single
+
+![single](https://user-images.githubusercontent.com/11540557/165930901-75b2a867-9861-4beb-8ffc-fce36987c7aa.png)
+
+![single](https://user-images.githubusercontent.com/11540557/165931065-abf2b861-46f5-435e-91e5-1c4b9995593a.png)
+
+![single](https://user-images.githubusercontent.com/11540557/165931166-8e75ec2c-3e0f-4b64-a191-49da4ee491c9.png)
