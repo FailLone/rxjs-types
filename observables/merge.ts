@@ -4,6 +4,7 @@ import { RenderItem } from "../render/renderItem";
 import { bigReduce } from '../number/bigReduce';
 import { or } from '../common/or'
 import { Observable } from './observable'
+import { maxNestCount } from "../common/maxNestCount";
 
 type mergeTwo<A extends RenderItem, B extends RenderItem>
     = A['frame'] extends B['frame']
@@ -16,7 +17,9 @@ type mergeTwo<A extends RenderItem, B extends RenderItem>
             }]
 
 type mergeValues<A extends RenderItem[], B extends RenderItem[], Seed extends number = 0>
-    = A extends [infer ItemA, ...infer RestA]
+    = Seed extends add<maxNestCount, 1>
+        ? []
+        : A extends [infer ItemA, ...infer RestA]
             ? B extends [infer ItemB, ...infer RestB]
                 ? [...mergeTwo<ItemA & RenderItem, ItemB & RenderItem>, ...mergeValues<RestA extends RenderItem[] ? RestA : [], RestB extends RenderItem[] ? RestB : [], add<Seed, 2>>]
                 : [ItemA, ...mergeValues<RestA extends RenderItem[] ? RestA : [], [], add<Seed, 1>>]
