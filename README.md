@@ -57,9 +57,9 @@
 
 ![distinctUntilChange](https://user-images.githubusercontent.com/11540557/165906541-f73def91-feb6-4cfe-a9a9-6bd00b92f471.png)
 
-- [X] endsWith
+- [X] endWith
 
-![endsWith](https://user-images.githubusercontent.com/11540557/165906645-d26ac15d-e893-4fc3-89a7-d0c9802f2ace.png)
+![endWith](https://user-images.githubusercontent.com/11540557/165906645-d26ac15d-e893-4fc3-89a7-d0c9802f2ace.png)
 
 - [X] filter
 
@@ -79,9 +79,9 @@
 
 ![skip](https://user-images.githubusercontent.com/11540557/165907227-15ebc457-4220-49e2-887a-b0dafbcea2d4.png)
 
-- [X] startsWith
+- [X] startWith
 
-![startsWith](https://user-images.githubusercontent.com/11540557/165907291-09132ab2-bcc2-4173-a2e0-2f3da8f3aff4.png)
+![startWith](https://user-images.githubusercontent.com/11540557/165907291-09132ab2-bcc2-4173-a2e0-2f3da8f3aff4.png)
 
 - [X] take
 
