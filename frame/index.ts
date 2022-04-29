@@ -1,8 +1,5 @@
 import { repeat } from "../string/repeat";
-import { end } from "./end";
-import { leftGroup } from "./leftGroup";
 import { oneFrame } from "./oneFrame";
-import { rightGroup } from "./rightGroup";
 import { toNumber } from "../string/toNumber";
 
 export type frame<T extends string> =
@@ -13,5 +10,3 @@ export type frame<T extends string> =
                 ? `-${A}s-`
                 : `-${T}ms-`
         : never
-
-export type symbols = leftGroup | rightGroup | end | oneFrame

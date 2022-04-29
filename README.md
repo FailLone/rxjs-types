@@ -6,9 +6,10 @@
 - `-` 时间，一个`-`代表1ms
 - `-10ms-` 超过10ms的时间
 - `-1s-` 以`000`结尾的时间
-- `X` 异常
-- `...` 表示 stream 无限或超出 ts 限制不能全部画出
-- `|` complete
+- `...` 表示超出 ts 限制 value 不能全部画出
+- `-|->` complete
+- `-X->` 异常
+- `-->` 无限的 stream
 
 ## observable
 - [X] fromArray
@@ -41,7 +42,6 @@
 
 ![merge](https://user-images.githubusercontent.com/11540557/165905989-bc9e20df-1ff9-4428-846f-c2fc571032c3.png)
 
-- [ ] concat
 
 ## operators
 

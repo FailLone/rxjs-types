@@ -10,4 +10,4 @@ export type timer<T extends number, I extends number | void = void> =
         : getObservable<[
             getRenderItem<0, `${T}`>,
             ...intervalHelper<I & number, 1>
-        ], false, true>
+        ]>

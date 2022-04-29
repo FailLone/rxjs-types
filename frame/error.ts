@@ -1,1 +1,1 @@
-export type error = 'X'
+export type error = '-X->'

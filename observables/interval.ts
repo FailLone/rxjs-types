@@ -6,13 +6,11 @@ import { getObservable } from "./observable";
 
 export type interval<I extends number> =
     getObservable<
-        intervalHelper<I>,
-        false,
-        true
+        intervalHelper<I>
     >
 
 export type intervalHelper<I extends number, Seed extends number = 0, Cur extends RenderItem[] = []> =
-    Seed extends maxNestCount
+    Seed extends add<maxNestCount, 1>
         ? Cur
         : intervalHelper<
             I,

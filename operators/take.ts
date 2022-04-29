@@ -2,23 +2,16 @@ import { push } from './../array/push';
 import { isEqual } from '../number/isEqual';
 import { add } from '../number/add';
 import { RenderItem } from '../render/renderItem';
-import { Observable, replaceIsEnd, replaceIsInfinite, replaceValue } from '../observables/observable';
-import { compare } from '../number/compare';
-import { maxNestCount } from '../common/maxNestCount';
-import { or } from '../common/or';
+import { Observable, replaceIsEnd, replaceValue } from '../observables/observable';
 
 export type take<
     S extends Observable,
     Count extends number,
     Res extends RenderItem[] = takeHelper<S['values'], Count>,
-    Equal extends boolean = or<compare<Res['length'], maxNestCount>, Res['length'] extends maxNestCount ? true : false>
 > =
     replaceIsEnd<
-        replaceIsInfinite<
-            replaceValue<S, Res>,
-            Equal
-        >,
-        Equal extends true ? false : true
+        replaceValue<S, Res>,
+        true
     >
 
 type takeHelper<S extends RenderItem[], Count extends number, Res extends RenderItem[] = [], Seed extends number = 0> =

@@ -1,1 +1,1 @@
-export type end = '|'
+export type end = '-|->'

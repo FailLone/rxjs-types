@@ -12,10 +12,4 @@ type rangeHelper<From extends number, To extends number, Res extends RenderItem[
             [...Res, getRenderItem<From, '0'>],
             true
         >
-        : Res['length'] extends maxNestCount
-            ? getObservable<
-                Res,
-                false,
-                true
-            >
-            : rangeHelper<add<From, 1>, To, [...Res, getRenderItem<From, '0'>]>
+        : rangeHelper<add<From, 1>, To, [...Res, getRenderItem<From, '0'>]>
