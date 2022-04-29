@@ -14,83 +14,88 @@
 ## observable
 - [X] fromArray
 
-![fromArray](https://user-images.githubusercontent.com/11540557/165904783-6082a561-8bdb-4a7f-8e52-0b13110876bd.png)
+<img width="267" alt="fromArray" src="https://user-images.githubusercontent.com/11540557/165992324-e9150b4a-9855-416a-ab42-814865b578ee.png">
 
 - [X] fromPromise
 
-![fromPromise](https://user-images.githubusercontent.com/11540557/165904974-34cbfb9d-feed-4571-8ce6-690cf2786f44.png)
+<img width="221" alt="fromPromise" src="https://user-images.githubusercontent.com/11540557/165992432-1d5de74a-eb6c-4df2-af32-d6da4a859d10.png">
 
 - [X] of
 
-![of](https://user-images.githubusercontent.com/11540557/165905118-bbe54dcf-4739-4c30-aa84-8f212f95c0ba.png)
+<img width="262" alt="of" src="https://user-images.githubusercontent.com/11540557/165992495-45d042c4-7ca0-45f1-8c3b-63c03deef975.png">
 
 - [X] range
 
-![range](https://user-images.githubusercontent.com/11540557/165905349-b36f8463-d369-413c-a8ad-51eafefd5f02.png)
+<img width="962" alt="range" src="https://user-images.githubusercontent.com/11540557/165992849-4bf90ec4-2c1b-4339-8680-40fa23f1aea7.png">
 
 - [X] timer
 
-![timer](https://user-images.githubusercontent.com/11540557/165905487-51154015-144c-4506-8a0a-6446579e3f92.png)
+<img width="264" alt="timer" src="https://user-images.githubusercontent.com/11540557/165992909-25170ddb-40e2-4a77-aed2-78b5b62b88b2.png">
 
-![timer](https://user-images.githubusercontent.com/11540557/165905561-b4d0112e-ba6f-4217-aac4-4c6896daa171.png)
+<img width="960" alt="timer" src="https://user-images.githubusercontent.com/11540557/165992962-d1ad4652-ad35-4d88-a25c-cdf1c2a6acf4.png">
 
 - [X] interval
 
-![interval](https://user-images.githubusercontent.com/11540557/165905645-ecd25dfa-d6dd-4708-b69b-40d889305e05.png)
+<img width="961" alt="interval" src="https://user-images.githubusercontent.com/11540557/165993136-454cbd08-69f9-4f68-9b13-31ec0cce1af9.png">
 
-- [X] merge
+- [ ] merge
 
-![merge](https://user-images.githubusercontent.com/11540557/165905989-bc9e20df-1ff9-4428-846f-c2fc571032c3.png)
+<img width="960" alt="merge" src="https://user-images.githubusercontent.com/11540557/165993597-9a1477ce-2344-470a-9960-46a0a03e90d2.png">
+
+有bug，待修复：
+
+<img width="962" alt="merge bug" src="https://user-images.githubusercontent.com/11540557/165993788-ba79d6a7-0c7e-4b09-b50b-a89721030ab5.png">
 
 
 ## operators
 
 - [X] delay
 
-![delay](https://user-images.githubusercontent.com/11540557/165906221-865e9640-40fc-4df8-9fae-45a1c818158b.png)
+<img width="395" alt="delay" src="https://user-images.githubusercontent.com/11540557/165993957-f5e9f914-340e-4fed-b34c-c6f37d9cefd3.png">
 
 - [X] distinct
 
-![distinct](https://user-images.githubusercontent.com/11540557/165906429-55f7bf7a-d5d0-4343-a4b0-f0c4095a9912.png)
+<img width="267" alt="distinct" src="https://user-images.githubusercontent.com/11540557/165994057-96426493-c21d-40bb-aeb6-7466d4a5a6b7.png">
 
 - [X] distinctUntilChange
 
-![distinctUntilChange](https://user-images.githubusercontent.com/11540557/165906541-f73def91-feb6-4cfe-a9a9-6bd00b92f471.png)
+<img width="290" alt="distinctUntilChange" src="https://user-images.githubusercontent.com/11540557/165994154-7460509a-f2ed-416a-886c-c499a70398c5.png">
 
 - [X] endWith
 
-![endWith](https://user-images.githubusercontent.com/11540557/165906645-d26ac15d-e893-4fc3-89a7-d0c9802f2ace.png)
+<img width="310" alt="endWith" src="https://user-images.githubusercontent.com/11540557/165994236-4aca23f3-aa2a-4810-bfe8-70f182d596b2.png">
 
 - [X] filter
 
-![filter](https://user-images.githubusercontent.com/11540557/165906724-47cc9677-d5bf-4077-9dd5-17e3f8653c81.png)
+<img width="270" alt="filter" src="https://user-images.githubusercontent.com/11540557/165994410-808bdf45-47fa-46cf-8e71-c33f4b242bb9.png">
 
 - [X] mapTo
 
-![mapTo](https://user-images.githubusercontent.com/11540557/165906967-673fed04-2365-4cd2-be6c-9c969d852025.png)
+<img width="338" alt="mapTo" src="https://user-images.githubusercontent.com/11540557/165994505-0fc87ba5-8284-4fd6-b935-fcd1718c2552.png">
 
 - [X] repeat
 
-![repeat](https://user-images.githubusercontent.com/11540557/165907070-3d26feb2-ed7a-47d9-bf18-02212066474a.png)
+<img width="463" alt="repeat" src="https://user-images.githubusercontent.com/11540557/165994587-8fba878d-721d-415f-a488-5e618964210b.png">
 
-![repeat](https://user-images.githubusercontent.com/11540557/165907147-31d1a6fd-5df7-4f13-b29f-bc2d6d085943.png)
+<img width="548" alt="repeat delay" src="https://user-images.githubusercontent.com/11540557/165994641-411934cb-5e2a-4cdb-a6fa-a34c002b65c4.png">
 
 - [X] skip
 
-![skip](https://user-images.githubusercontent.com/11540557/165907227-15ebc457-4220-49e2-887a-b0dafbcea2d4.png)
+<img width="244" alt="skip" src="https://user-images.githubusercontent.com/11540557/165994714-25ec66cc-f278-47d3-9b1f-7e36c27731f1.png">
 
 - [X] startWith
 
-![startWith](https://user-images.githubusercontent.com/11540557/165907291-09132ab2-bcc2-4173-a2e0-2f3da8f3aff4.png)
+<img width="319" alt="startWith" src="https://user-images.githubusercontent.com/11540557/165994764-2197b9c5-3c5d-4c7d-9368-0869a2fa20ee.png">
 
 - [X] take
 
-![take](https://user-images.githubusercontent.com/11540557/165907361-c22a8f4d-8999-469a-aa70-c8974cb617ad.png)
+<img width="716" alt="take" src="https://user-images.githubusercontent.com/11540557/165994857-252cfc4c-5229-43d6-a71d-23e9a4300723.png">
 
 - [X] single
 
-![single](https://user-images.githubusercontent.com/11540557/165930901-75b2a867-9861-4beb-8ffc-fce36987c7aa.png)
+<img width="202" alt="single" src="https://user-images.githubusercontent.com/11540557/165994912-7c728400-79a1-4a00-b4d4-0805ad324e21.png">
 
-![single](https://user-images.githubusercontent.com/11540557/165931065-abf2b861-46f5-435e-91e5-1c4b9995593a.png)
+<img width="273" alt="single" src="https://user-images.githubusercontent.com/11540557/165995176-7a2a5bc2-c7c5-4f09-9d51-8b114240e609.png">
 
-![single](https://user-images.githubusercontent.com/11540557/165931166-8e75ec2c-3e0f-4b64-a191-49da4ee491c9.png)
+<img width="195" alt="single" src="https://user-images.githubusercontent.com/11540557/165995278-445ddeb2-4d14-4054-8f89-d675d3e1b5da.png">
+
