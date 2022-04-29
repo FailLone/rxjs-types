@@ -1,10 +1,9 @@
-import { leftGroup } from "../frame/leftGroup";
-import { rightGroup } from "../frame/rightGroup";
+import { Observable, replaceValue } from "../observables/observable";
 import { RenderItem } from "../render/renderItem";
 import { stringLike } from "../string/stringLike";
 
-export type distinctUntilChanged<S extends RenderItem[]> =
-    distinctHelper<S>
+export type distinctUntilChanged<S extends Observable> =
+    replaceValue<S, distinctHelper<S['values']>>
 
 type distinctHelper<S extends RenderItem[], Prev extends stringLike = ''>
     = S extends [infer Item, ...infer Rest]

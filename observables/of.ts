@@ -2,8 +2,8 @@ import { fromArray } from './from';
 import { stringLike } from "../string/stringLike";
 
 export type of<
-    T1 extends unknown,
-    T2 extends unknown,
+    T1 extends unknown = unknown,
+    T2 extends unknown = unknown,
     T3 extends unknown = unknown,
     T4 extends unknown = unknown,
     T5 extends unknown = unknown,

@@ -1,16 +1,13 @@
-import { render } from './../render/index';
 import { getRenderItem } from '../render/renderItem';
-import { push } from './../array/push';
 import { stringLike } from './../string/stringLike';
+import { getObservable } from './observable';
 
 export type fromArray<T extends stringLike[]> =
-    T extends [...infer Before, infer Last]
-        ? push<{
-                [K in keyof Before]: getRenderItem<Before[K] & stringLike>
-            }, getRenderItem<Last & stringLike, 0, true>>
-        : getRenderItem<'', 0, true>
+    getObservable<{
+        [K in keyof T]: getRenderItem<T[K] & stringLike>
+    }, true>
 
 
 export type fromPromise<T extends Promise<stringLike>> = T extends Promise<infer Res>
-    ? getRenderItem<Res & stringLike, 0, true>
+    ? getObservable<[getRenderItem<Res & stringLike>], true>
     : never

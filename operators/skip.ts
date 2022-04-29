@@ -1,14 +1,18 @@
 import { add } from '../number/add';
-import { RenderItem, replaceFrame } from './../render/renderItem';
+import { bigAdd } from '../number/bigAdd';
+import { Observable, replaceValue } from '../observables/observable';
+import { RenderItem } from './../render/renderItem';
 
-export type skip<T extends RenderItem[], I extends number> =
-    skipHelper<T, I>
+export type skip<T extends Observable, I extends number> =
+    replaceValue<T, skipHelper<T['values'], I>>
 
-type skipHelper<T extends RenderItem[], I extends number, Seed extends number = 0, PrevFrame extends number = 0> =
+type skipHelper<T extends RenderItem[], I extends number, Seed extends number = 0, PrevFrame extends string = `${0}`> =
     T extends [infer Item, ...infer Rest]
-        ? I extends Seed
-            ? [replaceFrame<Item & RenderItem, add<PrevFrame, (Item & RenderItem)['frame']>>, ...Rest]
-            : Rest extends RenderItem[]
-                ? skipHelper<Rest, I, add<Seed, 1>, add<PrevFrame, (Item & RenderItem)['frame']>>
-                : T
+        ? bigAdd<PrevFrame, (Item & RenderItem)['frame']> extends `${infer NewFrame}`
+            ? I extends Seed
+                ? [{ value: (Item & RenderItem)['value'], frame: NewFrame }, ...Rest]
+                : Rest extends RenderItem[]
+                    ? skipHelper<Rest, I, add<Seed, 1>, NewFrame>
+                    : T
+            : never
         : T

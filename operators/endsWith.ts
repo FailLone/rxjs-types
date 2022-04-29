@@ -1,11 +1,8 @@
 import { stringLike } from "../string/stringLike"
-import { getRenderItem, RenderItem } from "../render/renderItem"
+import { getRenderItem } from "../render/renderItem"
+import { Observable, replaceValue } from "../observables/observable"
 
-export type endsWith<S extends RenderItem[], T extends stringLike> =
-    S extends [...infer Before, infer Item]
-        ? Item extends RenderItem
-            ? Item['isEnd'] extends true
-                ? [...Before, getRenderItem<Item['value'], Item['frame']>, getRenderItem<T, 0, true>]
-                : S
-            : S
+export type endsWith<S extends Observable, T extends stringLike> =
+    S['isEnd'] extends true
+        ? replaceValue<S, [...S['values'], getRenderItem<T>]>
         : S

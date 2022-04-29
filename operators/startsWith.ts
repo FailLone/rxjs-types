@@ -1,6 +1,5 @@
-import { group } from "../frame/group";
-import { getRenderItem, RenderItem } from "../render/renderItem";
+import { Observable, replaceValue } from "../observables/observable";
+import { getRenderItem } from "../render/renderItem";
 import { stringLike } from "../string/stringLike";
 
-export type startsWith<S extends RenderItem[], T extends stringLike> =
-    [getRenderItem<T>, ...S]
+export type startsWith<S extends Observable, T extends stringLike> = replaceValue<S, [getRenderItem<T>, ...S['values']]>
