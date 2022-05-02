@@ -99,3 +99,11 @@
 
 <img width="195" alt="single" src="https://user-images.githubusercontent.com/11540557/165995278-445ddeb2-4d14-4054-8f89-d675d3e1b5da.png">
 
+- [X] concatAll
+
+<img width="961" alt="image" src="https://user-images.githubusercontent.com/11540557/166305172-86fbd5c4-7a65-4d36-9626-38ed062948fe.png">
+
+<img width="337" alt="image" src="https://user-images.githubusercontent.com/11540557/166305240-7f0b8e3f-3ed5-4a3b-90f2-5220e095d14c.png">
+
+<img width="404" alt="image" src="https://user-images.githubusercontent.com/11540557/166305422-2e174ba2-223b-4815-8fe7-2f9b0b21d02f.png">
+
