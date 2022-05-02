@@ -19,10 +19,11 @@ export type renderAll<T extends RenderItem[], Seed extends number = 0> =
         : T extends [infer Item, ...infer Rest]
             ? concat<renderOne<Item & RenderItem>, renderAll<Rest extends RenderItem[] ? Rest : [], add<Seed, 1>>>
             : ''
-
-export type render<T extends Observable> =
-    `${renderAll<T['values']>}${
-        compare<T['values']['length'], maxNestCount> extends true
+export type renderTail<T extends Observable>
+    = `${
+        T['values']['length'] extends maxNestCount
+            ? ellipsis
+            : compare<T['values']['length'], maxNestCount> extends true
                 ? ellipsis
                 : ''
     }${
@@ -32,3 +33,5 @@ export type render<T extends Observable> =
                 ? end
                 : forever
     }`
+export type render<T extends Observable> =
+    `${renderAll<T['values']>}${renderTail<T>}`

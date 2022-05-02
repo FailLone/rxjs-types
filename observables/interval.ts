@@ -10,7 +10,7 @@ export type interval<I extends number> =
     >
 
 export type intervalHelper<I extends number, Seed extends number = 0, Cur extends RenderItem[] = []> =
-    Seed extends add<maxNestCount, 1>
+    Seed extends maxNestCount
         ? Cur
         : intervalHelper<
             I,
