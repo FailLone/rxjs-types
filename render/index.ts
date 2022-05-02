@@ -10,28 +10,26 @@ import { maxNestCount } from '../common/maxNestCount';
 import { add } from '../number/add';
 import { ellipsis } from '../frame/ellipsis';
 import { forever } from '../frame/forever';
+import { push } from '../array/push';
+import { join } from '../array/join'
 
 export type renderOne<T extends RenderItem> = `${frame<T['frame']>}${group<T['value']>}`
 
-export type renderAll<T extends RenderItem[], Seed extends number = 0> =
-    Seed extends maxNestCount
-        ? ''
+export type renderAll<T extends RenderItem[], Res extends string[] = []> =
+    Res['length'] extends maxNestCount
+        ? push<Res, ellipsis>
         : T extends [infer Item, ...infer Rest]
-            ? concat<renderOne<Item & RenderItem>, renderAll<Rest extends RenderItem[] ? Rest : [], add<Seed, 1>>>
-            : ''
+            ? renderAll<Rest extends RenderItem[] ? Rest : [], push<Res, renderOne<Item & RenderItem>>>
+            : Res
+
 export type renderTail<T extends Observable>
     = `${
-        T['values']['length'] extends maxNestCount
-            ? ellipsis
-            : compare<T['values']['length'], maxNestCount> extends true
-                ? ellipsis
-                : ''
-    }${
         T['isError'] extends true
             ? error
             : T['isEnd'] extends true
                 ? end
                 : forever
     }`
-export type render<T extends Observable> =
-    `${renderAll<T['values']>}${renderTail<T>}`
+
+export type render<T extends Observable, Head extends string = join<renderAll<T['values']>, ''>, Tail extends string = renderTail<T>> =
+    `${Head}${Tail}`
