@@ -107,3 +107,6 @@
 
 <img width="404" alt="image" src="https://user-images.githubusercontent.com/11540557/166305422-2e174ba2-223b-4815-8fe7-2f9b0b21d02f.png">
 
+- [X] max
+
+<img width="283" alt="image" src="https://user-images.githubusercontent.com/11540557/166307866-d2a1e00f-1831-45d3-b248-3b2d3c5308c2.png">
