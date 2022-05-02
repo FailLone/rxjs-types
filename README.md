@@ -38,13 +38,13 @@
 
 <img width="961" alt="interval" src="https://user-images.githubusercontent.com/11540557/165993136-454cbd08-69f9-4f68-9b13-31ec0cce1af9.png">
 
-- [ ] merge
+- [X] merge
 
 <img width="960" alt="merge" src="https://user-images.githubusercontent.com/11540557/165993597-9a1477ce-2344-470a-9960-46a0a03e90d2.png">
 
-有bug，待修复：
+<img width="958" alt="image" src="https://user-images.githubusercontent.com/11540557/166299242-6f6dc2d1-3324-4bde-9980-f1e16df7ab91.png">
 
-<img width="962" alt="merge bug" src="https://user-images.githubusercontent.com/11540557/165993788-ba79d6a7-0c7e-4b09-b50b-a89721030ab5.png">
+<img width="964" alt="image" src="https://user-images.githubusercontent.com/11540557/166304269-f9cdc27f-7db8-458e-a07c-f638666384ff.png">
 
 
 ## operators
