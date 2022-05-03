@@ -115,3 +115,6 @@
 
 <img width="954" alt="image" src="https://user-images.githubusercontent.com/11540557/166401358-644858a3-dc82-4e9b-a466-a3e462c14b32.png">
 
+- [X] reduce
+
+<img width="274" alt="image" src="https://user-images.githubusercontent.com/11540557/166402515-029dad5f-5f34-4900-8f3c-472302301442.png">
