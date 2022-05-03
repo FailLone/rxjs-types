@@ -110,3 +110,8 @@
 - [X] max
 
 <img width="283" alt="image" src="https://user-images.githubusercontent.com/11540557/166307866-d2a1e00f-1831-45d3-b248-3b2d3c5308c2.png">
+
+- [X] scan
+
+<img width="954" alt="image" src="https://user-images.githubusercontent.com/11540557/166401358-644858a3-dc82-4e9b-a466-a3e462c14b32.png">
+
