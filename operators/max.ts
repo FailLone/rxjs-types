@@ -2,10 +2,11 @@ import { bigAdd } from "../number/bigAdd";
 import { compare } from "../number/compare";
 import { getObservable, Observable, replaceValue } from "../observables/observable";
 import { RenderItem } from "../render/renderItem";
+import { mergeFrame } from "./reduce";
 
 export type max<T extends Observable> =
     T['isEnd'] extends true
-        ? replaceValue<T, maxHelper<T['values']>>
+        ? replaceValue<T, mergeFrame<maxHelper<T['values']>>>
         : getObservable<[], false>
 
 type maxHelper<T extends RenderItem[], Prev extends RenderItem | void = void> =
@@ -24,4 +25,7 @@ type maxHelper<T extends RenderItem[], Prev extends RenderItem | void = void> =
                         : Prev
                 >
         ]
-        : [Prev & RenderItem]
+        : [{
+            value: (Prev & RenderItem)['value'],
+            frame: '0'
+        }]
