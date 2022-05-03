@@ -5,9 +5,7 @@ import { RenderItem } from "./renderItem";
 import { frame } from '../frame';
 import { error } from '../frame/error';
 import { Observable } from '../observables/observable';
-import { compare } from '../number/compare';
 import { maxNestCount } from '../common/maxNestCount';
-import { add } from '../number/add';
 import { ellipsis } from '../frame/ellipsis';
 import { forever } from '../frame/forever';
 import { push } from '../array/push';
@@ -19,7 +17,7 @@ export type renderAll<T extends RenderItem[], Res extends string[] = []> =
     Res['length'] extends maxNestCount
         ? push<Res, ellipsis>
         : T extends [infer Item, ...infer Rest]
-            ? renderAll<Rest extends RenderItem[] ? Rest : [], push<Res, renderOne<Item & RenderItem>>>
+            ? renderAll<Rest extends RenderItem[] ? Rest : never, push<Res, renderOne<Item & RenderItem>>>
             : Res
 
 export type renderTail<T extends Observable>
