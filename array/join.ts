@@ -1,6 +1,6 @@
 import { stringLike } from "../string/stringLike";
 
-export type join<T extends stringLike[], Seperator extends string = ','> =
+export type join<T extends unknown[], Seperator extends string = ','> =
     T['length'] extends 0
         ? ''
         : T extends [infer Item, ...infer Rest]
