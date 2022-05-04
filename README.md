@@ -3,6 +3,7 @@
 
 ## 符号释义
 - `(any)` 值
+- `(any,any,any)` 组合值，同一次抛出的多个值，不同于`(any)(any)(any)`
 - `-` 时间，一个`-`代表1ms
 - `-10ms-` 超过10ms的时间
 - `-1s-` 以`000`结尾的时间
@@ -46,6 +47,11 @@
 
 <img width="964" alt="image" src="https://user-images.githubusercontent.com/11540557/166304269-f9cdc27f-7db8-458e-a07c-f638666384ff.png">
 
+- [X] zip
+
+<img width="1003" alt="image" src="https://user-images.githubusercontent.com/11540557/166622394-e10ade88-dc26-4251-a89b-3c06b0f0ca9f.png">
+
+<img width="515" alt="image" src="https://user-images.githubusercontent.com/11540557/166622484-caddeb80-9634-481f-8785-37856410c7ee.png">
 
 ## operators
 
@@ -118,3 +124,8 @@
 - [X] reduce
 
 <img width="274" alt="image" src="https://user-images.githubusercontent.com/11540557/166402515-029dad5f-5f34-4900-8f3c-472302301442.png">
+
+- [X] every
+
+<img width="294" alt="image" src="https://user-images.githubusercontent.com/11540557/166622314-dfcc64e6-0cab-41bd-a261-927d90bd17e0.png">
+
