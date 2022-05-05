@@ -3,6 +3,7 @@ import { bigAdd } from "../number/bigAdd";
 import { getObservable, Observable, replaceValue } from "../observables/observable";
 import { RenderItem } from "../render/renderItem";
 import { concat } from "../string/concat";
+import { stringLike } from "../string/stringLike";
 
 export type reduce<T extends Observable> =
     T['isEnd'] extends true
@@ -22,9 +23,12 @@ type reduceHelper<T extends RenderItem[], Prev extends number | string | void = 
                     : never
         : [{ frame: '0', value: Prev & (string | number) }]
 
-export type mergeFrame<T extends RenderItem[], Prev extends string = '0'> =
+export type mergeFrame<T extends RenderItem[], Prev extends string = '0', Target extends stringLike = ''> =
     T extends [infer Item, ...infer Rest]
-        ? (Item & RenderItem)['value'] extends ''
-            ? mergeFrame<Rest extends RenderItem[] ? Rest : [], bigAdd<Prev, (Item & RenderItem)['frame']>>
-            : [{ value: (Item & RenderItem)['value'], frame: bigAdd<Prev, (Item & RenderItem)['frame']> }, ...mergeFrame<Rest extends RenderItem[] ? Rest : [], '0'>]
-        : []
+        ? (Item & RenderItem)['value'] extends Target
+            ? mergeFrame<Rest extends RenderItem[] ? Rest : [], bigAdd<Prev, (Item & RenderItem)['frame']>, Target>
+            : [{ value: (Item & RenderItem)['value'], frame: bigAdd<Prev, (Item & RenderItem)['frame']> }, ...mergeFrame<Rest extends RenderItem[] ? Rest : [], '0', Target>]
+        : [{
+            value: '',
+            frame: Prev
+        }]
