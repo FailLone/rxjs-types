@@ -25,7 +25,7 @@ export type zip<
     removeVoid<[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12]>
 >
 
-type removeVoid<T extends (Observable | void)[]> =
+export type removeVoid<T extends (Observable | void)[]> =
     T extends [infer Item, ...infer Rest]
             ? Item extends Observable
                 ? [Item, ...removeVoid<Rest extends (Observable | void)[] ? Rest : []>]
@@ -62,11 +62,11 @@ type zipValue<T extends Observable[], Index extends number, Value extends string
                 : never
             : Value
 
-type totalSameLen<T extends Observable[]> =
+export type totalSameLen<T extends Observable[]> =
         unionToTuple<T[number]['values']['length']>['length'] extends 1 ? true : false
 
-type totalIsEnd<T extends Observable[]> =
+export type totalIsEnd<T extends Observable[]> =
         T[number]['isEnd'] extends true ? true : false
 
-type anyIsError<T extends Observable[]> =
+export type anyIsError<T extends Observable[]> =
         T[number]['isError'] extends false ? false : true
